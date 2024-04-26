@@ -1,0 +1,164 @@
+/* Hoja de estilos
+Versión 1.0 */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    /* Esta fuente es temporal, podemos cambiarla */
+}
+
+body {
+    background-color: #f0d1f7;
+    color:#000000;
+}
+
+/* Header */
+.header {
+    background-color: #460646; /* Los colores y demás t también lo podemos cambiar*/
+    color: #f0f8ff;
+    height: 15vh;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    .navegacion{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 1.3rem;
+
+        /* Logo */
+        .anclalogo{
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* Lista de Navegación principal */
+        .listaNav {
+            list-style: none;
+            display: flex;
+            align-items: space-between;
+
+            .listaItem{
+                margin: 20px;
+
+                /* Botones */
+                .linkNav{
+                    color:#ffffff;
+                    text-decoration: none;
+                    font-weight: 700;
+                    font-size: 1rem;
+                    padding: 0.5rem 1rem;
+
+                    /* Efecto del botón */
+                    transition: transform 0.3s; box-shadow: 0.3s;
+                    &:hover{
+                        transform: scale(0.95);
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+
+        /* Registro e Inicio de Sesión */        
+        .logIn {
+            list-style: none;
+            display: flex;
+            align-items: last baseline;
+            margin-left: 0;
+
+            .logItem{
+                margin: 10px;
+                
+                .linkLog{
+                color:#ffffff;
+                text-decoration: none;
+                font-weight: 400;
+                font-size: 0.7rem;
+                padding: 0.5rem 1rem;
+
+                transition: transform 0.3s; box-shadow: 0.3s;
+                &:hover{
+                    transform: scale(0.95);
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                    border-radius: 5px;
+                }
+            }
+        }
+
+        /*Botón de Inicio de Sesión*/
+            .linkLog.iniciarSesión{
+            background-color: #ffffff;
+            color: #3b0269;
+            border-radius: 5px;
+
+            /* Efecto de botón */ 
+            transition: transform 0.3s; box-shadow: 0.3s;
+             &:hover{
+                background-color: #d5afee;
+                transform: scale(0.95);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            }
+        }
+     }
+
+    }
+}
+
+/* Estilos para MOBILE y TABLET */ 
+@media (max-width: 768px){ 
+/* Entiendo que a partir de acá esta configuración debería ayudar a mantener el tamaño inicial del encabezado
+y modificar el contenido, pero creo que hay algo mal */
+
+    .header{
+        height: initial;
+
+        .navegacion{
+            margin-left: 10px;
+            margin-right: 10px;
+            flex-direction: column;
+            row-gap: 20px;
+
+            .anclalogo{
+                font-weight: 700;
+                font-size: 1.2rem;
+            }
+
+            listaNav{
+                padding: initial;
+                listaItem{
+                    linkNav{
+                        font-weight: 300;
+                        margin-right: initial;
+                        font-size: 1rem;
+                        padding: 0.2rem;
+                    }
+                }
+             }
+
+             logIn{
+                padding: initial;
+
+                logItem{
+                    linkLog{
+                        font-weight: 300;
+                        margin-right: initial;
+                        font-size: 1rem;
+                        padding: 0.2rem;
+                    }
+                }
+             }
+
+
+        }
+    }
+} 
+
+
