@@ -120,7 +120,6 @@ body {
     height: 300px;
     }
     .img-banner {
-    .img-banner {
         width: 100%; 
         height: 100%; 
         object-fit: cover; 
@@ -143,8 +142,6 @@ body {
     font-weight: bold;
     font-family: 'Lucida Sans Unicode';
 }
-
-
 /* estilo main*/
 .columna {
     width: 100%;
